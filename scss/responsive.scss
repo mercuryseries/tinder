@@ -1,0 +1,46 @@
+// Large Desktops
+@media screen and (min-width: 1400px) {
+  .banner .intro {
+    top: 32%;
+  }
+}
+
+// Mobile & Tablettes
+@media screen and (max-width: 768px) {
+  .banner {
+    .top_header {
+      nav > a, ul {
+        margin-top: 0.4em;
+      }
+    }
+
+    .intro {
+      top: 32%;
+
+      h1 {
+        font-size: 1.6em;
+        img {
+          width: 300px;
+        }
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+
+      .download_mobile_apps_buttons {
+        margin-top: 2.5em;
+      }
+    }
+
+    .arrow_down {
+      bottom: 0.3em;
+    }
+  }
+
+  .footer .footer_column {
+    clear: both;
+    width: 100%;
+    margin-top: 0.8em;
+  }
+}

@@ -1,0 +1,22 @@
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  width: 760px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+
+// Mobile & Tablettes
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 90%;
+  }
+}

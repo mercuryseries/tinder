@@ -1,0 +1,17 @@
+@mixin rounded_button($padding, $radius) {
+  display: inline-block;
+  border: 2px solid $white;
+  padding: $padding;
+  border-radius: $radius;
+  color: $white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:focus, &:active {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

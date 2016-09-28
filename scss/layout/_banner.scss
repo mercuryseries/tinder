@@ -1,0 +1,138 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .overlay, #video_background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .overlay {
+    background: url(../images/initial_banner_bg.jpg) center center no-repeat;
+    background-size: cover;
+    filter: blur(15px);
+    will-change: opacity;
+    transition: opacity 3s ease-out;
+    z-index: -100;
+  }
+
+  #video_background {
+    z-index: -150;
+  }
+
+  .top_header {
+    float: right;
+
+    nav > a {
+      float: left;
+      margin-top: 1.3em;
+
+      @include rounded_button(8px, 8px)
+    }
+
+    ul {
+      float: right;
+      list-style: none;
+      margin: 1.3em 1.5em 0 0.6em;
+      padding: 0;
+
+      img {
+        display: inline-block;
+        width: 18px;
+        float: left;
+        margin: 0 0.3em 0 0;
+        max-width: 100%;
+      }
+
+      li:not(.active) {
+        display: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+
+        a {
+          text-decoration: none;
+          color: $white;
+          text-transform: uppercase;
+          font-size: 0.7em;
+
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+
+      li.active a {
+        @include rounded_button(8px, 8px)
+      }
+    }
+  }
+
+  .intro {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    color: $white;
+    text-align: center;
+
+    h1, p {
+      font-size: 2.5em;
+      font-weight: 500;
+    }
+
+    p {
+      margin-top: -0.4em;
+    }
+
+    h1 {
+      img {
+        display: inline-block;
+        width: 550px;
+        min-width: 23%;
+        max-width: 80%;
+        max-height: 40%;
+        margin-top: 0.3em;
+      }
+    }
+
+    .download_mobile_apps_buttons {
+      width: 100%;
+      text-align: center;
+
+      .button {
+        text-decoration: none;
+
+        img {
+          width: 165px;
+
+          &:first-child {
+            margin-right: 0.5em;
+          }
+
+          &:last-child {
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow_down {
+    position: absolute;
+    bottom: 1.5em;
+    width: 100%;
+    color: $white;
+    font-size: 2em;
+    text-align: center;
+  }
+}
